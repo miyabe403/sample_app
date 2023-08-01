@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get 'top' => 'homes#top'
   post 'lists' => 'lists#create'
   get 'lists' => 'lists#index'
-  get 'lists/show'
   # .../lists/1 や .../lists/3 に該当する
-  get 'lists/:id' => 'lists#show'
+  get 'lists/:id' => 'lists#show', as: 'list'  # 名前付きルート as:オプションを追加「'lists#show'の設定を、listとして利用できる」
 end
