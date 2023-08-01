@@ -22,6 +22,7 @@ class ListsController < ApplicationController
   end
 
   def edit
+    @list = List.find(params[:id])  # 投稿済みのデータを編集するので、保存されているデータを取得します。
   end
   
   private
