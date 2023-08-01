@@ -3,6 +3,8 @@
 <% @lists.each do |list| %>  
 <!-- @lists.eachと記述することで、Listレコードの数だけ繰り返し処理を行います。 -->
   <p>タイトル</p>
-  <span><%= list.title %></span>
+  <span>
+    <%= link_to list.title, "/lists/#{list.id}" %>  <!-- リンク先URLは、/lists/:idの「:idに該当する部分」を指定します。-->
+  </span>
   <!-- list.[カラム名]と記述することで、レコードのカラムの内容を表示できます。 -->
 <% end %>
