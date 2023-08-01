@@ -18,6 +18,7 @@ class ListsController < ApplicationController
   end
 
   def show
+    @list = List.find(params[:id])  # URLが/lists/1の場合、params[:id] と記述すると、id=1を取り出せます。
   end
 
   def edit
