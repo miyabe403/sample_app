@@ -1,8 +1,8 @@
 <h1>投稿一覧</h1>
 
-<%= @lists.each do |list| %>
-
+<%= @lists.each do |list| %>  
+<!-- @lists.eachと記述することで、Listレコードの数だけ繰り返し処理を行います。-->
   <p>タイトル</p>
-  <span><%></span>
+  <span><%= list.title %></span>
   
 <% end %>
