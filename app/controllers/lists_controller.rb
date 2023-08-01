@@ -14,7 +14,7 @@ class ListsController < ApplicationController
   end  
     
   def index
-    @lists = List.all
+    @lists = List.all  # allメソッドを使ってデータベース内のデータを全て取得する
   end
 
   def show
