@@ -1,11 +1,15 @@
 <h1>新規投稿</h1>
 <!-- form_with部分 オプション追記(厳密な記述) -->
 <%= form_with model: @list, url: '/lists', method: :post do |f| %>
+  <!-- Listモデルのtitle用のフィールドを追加 -->
 　<h4>タイトル</h4>
   <%= f.text_field :title %>
-  
+  <!-- Listモデルのbody用のフィールドを追加 -->
   <h4>本文</h4>
   <%= f.text_area :body %>
+  <!-- Listモデルのimage用のフィールドを追加 -->
+  <h4>画像</h4>
+  <%= f.file_field :image, accept: "image/*" %>
   
   <%= f.submit '投稿' %>
   
