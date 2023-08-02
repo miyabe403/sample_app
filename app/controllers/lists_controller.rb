@@ -11,7 +11,7 @@ class ListsController < ApplicationController
       # 4. 詳細画面へリダイレクト
       redirect_to list_path(@list.id)  # 「転送したいアクションへのURL」を指定します。
     else  # データが入力されていなければ、saveメソッドでfalseが返されます。
-      render :new  #  render :アクション名で、同じコントローラ内の別アクションのViewを表示できます。
+      render :new  #  render :アクション名で、同じコントローラ内の別アクションのViewを表示できます。　
     end
   end  
   
