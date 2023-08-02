@@ -1,4 +1,20 @@
-<h1>投稿一覧</h1> 
+<div class="list-wrap">
+<% @lists.each do |list| %>
+  <div class="list-box">
+    <% if list.image.attached? %>
+      <%= image_tag list.image, size: "200x200" %>
+    <% else %>
+      <%= image_tag 'no_image', size: "200x200"%>
+    <% end%>
+    <div class="list-comment">
+      <span class=list-body""><%= list.body %></span>  <!-- %= list.body % はListモデルのbodyカラムに入っているデータを呼び出している記述です。
+      <span class="list-title"><%=link_to list.title, list_path(list.id) %></span>
+    </div>
+  </div>
+<% end %>  
+</div>
+
+<h1>投稿一覧</h1>
 <!-- 各レコードの内容は、listという変数に格納されます。 -->
 <% @lists.each do |list| %>
 <!-- @lists.eachと記述することで、Listレコードの数だけ繰り返し処理を行います。 -->
