@@ -13,7 +13,7 @@ class ListsController < ApplicationController
     else  # データが入力されていなければ、saveメソッドでfalseが返されます。
       render :new  #  render :アクション名で、同じコントローラ内の別アクションのViewを表示できます。　
       
-      # エラーメッセージを扱う際にはrender、それ以外はredirect_toを使う
+      # エラーメッセージを扱う際にはrender、それ以外はredirect_toを使う　
       #@lists = List.all  # renderする際はrenderしたアクションが必要なインスタンス変数を用意しなければなりません。
       #render :index  #<= new から indexに変更 @listsというインスタンス変数がcreateアクション内に定義されていないことが確認できます。
       #redirect_to new_list_path  # renderではなくredirect_toだった場合 createアクション内で発生したバリデーションエラーにはerrorsメソッドでアクセスできなくなります。
