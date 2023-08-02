@@ -32,8 +32,8 @@ class ListsController < ApplicationController
   end  
   
   private
-  # ストロングパラメータ
+  # ストロングパラメータ  投稿機能
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body, :image)  # title,body,imageのデータの取得を許可します。
   end
 end
