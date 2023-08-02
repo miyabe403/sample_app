@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'lists/:id' => 'lists#show', as: 'list'  # 名前付きルート as:オプションを追加「'lists#show'の設定を、listとして利用できる」
   get 'lists/:id/edit' => 'lists#edit', as: 'edit_list'  # URLに:idを用いて記述すると、lists/◯◯/editのすべてのURLが対象になります。
   patch 'lists/:id' => 'lists#update', as: 'update_list'  # 更新の場合はPATCHで指定します。
+  
 end
