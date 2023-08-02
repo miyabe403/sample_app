@@ -8,6 +8,10 @@
   </span>
   
   <p>画像</p> <!-- imgタグを生成するimage_tagヘルパーを使い、画像の表示を行います。 -->
-  <%= image_tag list.image, size: "200x200" %> <!-- listに紐ついているimageをimage_tagに渡すことで画像を表示する。画像サイズを200x200に設定 -->
+  <% if list.image.attached? %> <!-- これは、list.imageに対して.attached?というimageが存在するかを確認するメソッドを呼び出しています。-->
+    <%= image_tag list.image, size: "200x200" %> <!-- listに紐ついているimageをimage_tagに渡すことで画像を表示する。画像サイズを200x200に設定 -->
+  <% else %> <!-- imageが存在していなければ用意したno_imageを表示する -->
+    <%= image_tag 'no_image', size: "200x200" %>
+  <% end %>
   
 <% end %>
