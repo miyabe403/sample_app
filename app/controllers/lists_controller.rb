@@ -13,7 +13,7 @@ class ListsController < ApplicationController
       redirect_to list_path(@list.id)  # 「転送したいアクションへのURL」を指定します。
     else  # データが入力されていなければ、saveメソッドでfalseが返されます。
       # 4. flash.nowでフラッシュメッセージを定義し、new.html.erbを描画する
-      flash.now[:notice] = "投稿に失敗しました。"
+      flash.now[:alert] = "投稿に失敗しました。"  #キーをalertに変更
       render :new  #  render :アクション名で、同じコントローラ内の別アクションのViewを表示できます。　
       
       # エラーメッセージを扱う際にはrender、それ以外はredirect_toを使う　
