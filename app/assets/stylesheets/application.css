@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+header, h1 nav, list-comment {
+  font-family: 'Kaushan', cursive, sans-serif;
+}
+
 header {
   widows: 90%;
   padding: 15px 0;
@@ -48,7 +52,7 @@ nav {
 .nav-list-item {
   list-style: none;
   display: inline-block;
-  margin: 0 auto;
+  margin: 0 20px;
 }
 
 main {
@@ -65,8 +69,40 @@ main {
   width: 200px;
   height: 250px;
   margin: 10px;
+  position: relative;
 }
 
 .list-comment {
   width: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.list-body {
+  color: gray;
+  font-size: 12px;
+}
+
+.list-title {
+  font-size: 18px;
+}
+
+/* Topページ用 自作 */
+.title-page img{
+   display: flex; /* Flexboxの利用 */
+  justify-content: space-between; /* 子要素の横並び・中央寄せ */
+  margin: 0 auto;
+}
+
+.title.page {
+  display: flex; /* Flexboxの利用 */
+  justify-content: space-between; /* 子要素の横並び・中央寄せ */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title-text {
+  text-align: center;
+  margin: 10px;
 }
