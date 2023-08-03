@@ -21,7 +21,7 @@
 }
 
 header, h1 nav, list-comment {
-  font-family: 'Kaushan', cursive, sans-serif;
+  font-family: 'Kaushan', cursive, sans-serif;  /* 外部のwebサイトからフォントを読み込む記述 */
 }
 
 header {
@@ -69,12 +69,12 @@ main {
   width: 200px;
   height: 250px;
   margin: 10px;
-  position: relative;
+  position: relative;  /* positionプロパティは親要素に「relative」 */
 }
 
 .list-comment {
   width: 200px;
-  position: absolute;
+  position: absolute;  /* positionプロパティは子要素に「absolute」 */
   left: 0;
   bottom: 0;
 }
@@ -84,16 +84,16 @@ main {
   color: gray;
   font-size: 12px;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  white-space: nowrap;  /* 「white-space: nowrap;」は、テキストを折り返し表示させないようにするプロパティ */
+  text-overflow: ellipsis;  /* 「text-overflow: ellipsis;」は、領域をはみ出したテキストを三点リーダー（...）で省略表示するプロパティ */
 }
 
 .list-title {
   display: block;
   font-size: 18px;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  white-space: nowrap;  /* 「white-space: nowrap;」は、テキストを折り返し表示させないようにするプロパティ */
+  text-overflow: ellipsis;  /* 「text-overflow: ellipsis;」は、領域をはみ出したテキストを三点リーダー（...）で省略表示するプロパティ */
 }
 
 /* Topページ用 自作 */
@@ -113,4 +113,5 @@ main {
 .title-text {
   text-align: center;
   margin: 10px;
+  font-family: 'Kaushan', cursive, sans-serif;
 }
